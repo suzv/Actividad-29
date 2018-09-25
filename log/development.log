@@ -1,0 +1,1167 @@
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:45:16 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.2) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHistories (20170703175956)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "histories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "picture" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170703175956"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-24 22:45:33.996602"], ["updated_at", "2018-09-24 22:45:33.996602"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:45:35 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:46:18 -0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for UsersController):
+  
+actionpack (5.1.2) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:46:54 -0300
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms
+
+
+  
+NameError (uninitialized constant UsersController::User):
+  
+app/controllers/users_controller.rb:3:in `new'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180924225048)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180924225048"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:51:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.5ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 1013ms (Views: 995.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 19:52:29 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5cpCzixZbj79wAbz0rRzX6NE4/Z2roWFaerCeWEpD1kzM3cqYPKrPNjh7whUyRyMJGPLvXOOmb/Xj6I97Jq/8A==", "user"=>{"name"=>"hola", "email"=>"hola@hola.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hola"], ["email", "hola@hola.com"], ["password", "hola"], ["created_at", "2018-09-24 22:52:29.648452"], ["updated_at", "2018-09-24 22:52:29.648452"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:52:29 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 74.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/1" for 127.0.0.1 at 2018-09-24 19:52:34 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z2j32HExCnojwe1Kinv8YVq+ZpxU8dhPF+BOBR1IuS2xkcI8PZrPeAbgBLEMBpOy3ZlO11HRxHWphS5BkPsJhA==", "id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:52:34 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:56:04 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__3247462814901393741_70107283922040'
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:56:12 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.6ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__3247462814901393741_70107259384340'
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:56:20 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb__3247462814901393741_70107228690500'
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:57:04 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-09-24 19:57:09 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 19:57:25 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29LeJbor1MKjH+bFdq0zz1KP7+FsB/5FOAlQBRrfdKHRF7f5mHiIflsub0ErdGTnPbZTph2abYcPfWS9gaodXQ==", "user"=>{"name"=>"1", "email"=>"1@1.cl", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "1"], ["email", "1@1.cl"], ["password", "123"], ["created_at", "2018-09-24 22:57:25.747851"], ["updated_at", "2018-09-24 22:57:25.747851"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:57:25 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 97ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sessions/2" for 127.0.0.1 at 2018-09-24 19:57:29 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UkdD0yMz1Bl8iR0VU5emVkolll4PPScICKG+KRlzmWer0Iceh3FfueHJsq+TrSzVMl74vCNlp8wVntv4Pq3o9w==", "id"=>"2"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 19:57:29 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:04 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 35.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:05 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:06 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:06 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 86ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:07 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 103ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 20:03:10 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n+STGC6xVXFcWegubPPrQhLgKH4LHkjeAKAQHKQI3QnPsPQDdbUeVjne7mz+V8lL26kjoMoQJPwe/xJy9uarbg==", "user"=>{"name"=>"hola", "email"=>"hola@hola.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hola"], ["email", "hola@hola.com"], ["password", "hola"], ["created_at", "2018-09-24 23:03:10.735401"], ["updated_at", "2018-09-24 23:03:10.735401"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:10 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:12 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 65.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:13 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:14 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:14 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:15 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:03:19 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 88.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:06:10 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 38.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:06:12 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:12:13 -0300
+  
+ArgumentError (Invalid route name, already in use: 'histories' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:8:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:12:45 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 55.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:12:47 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 39.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/histories/new" for 127.0.0.1 at 2018-09-24 20:12:49 -0300
+Processing by HistoriesController#new as HTML
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (6.9ms)
+  Rendered histories/new.html.erb within layouts/application (13.5ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 61.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:12:55 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KVVWNgp4v5/owLIB3LLDGJVFvWWsxU2KExzpGWkA1w3V8Vb8swU0sHnVh26Tknyi3Od1/UtxXMNJTdAKGYAJVQ==", "history"=>{"title"=>"nlce", "remote_picture_url"=>"djnfcek", "picture_cache"=>"", "content"=>"dnjclefcke"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (5.2ms)
+  Rendered histories/new.html.erb within layouts/application (13.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 79.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:13:11 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LxABBLvYVY/FhAN5Ju/Mzz4nrv7Sna1uQnoHAday8+j1o2HmgUm8mUtyf/T6lufZ3CFOwM75I2gnQyDQv65+KA==", "history"=>{"title"=>"nlce", "remote_picture_url"=>"http://jfnkjvnfgjk", "picture_cache"=>"", "content"=>"dnjclefcke"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (2.7ms)
+  Rendered histories/new.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 144ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:13:25 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ZOUWIRVfrOWKA5SQn2Q5pIyXuKuThmPem1zv8oHDZQ3IPS6vsSXpRject+eBLvwcDS+3LIql4kfVFRuoxuAVA==", "history"=>{"title"=>"nlce", "remote_picture_url"=>"http://www.uc.cl/templates/webucinterior/images/UCcolor.png", "picture_cache"=>"", "content"=>"dnjclefcke"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (5.1ms)
+  Rendered histories/new.html.erb within layouts/application (9.5ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 519ms (Views: 99.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:13:29 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 64.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:17:40 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 51.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:19:30 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 20:19:34 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ey8jJwMWpWeR1b3AvzkSWOBwok7A5IJb86UeE1BkGT6hnEPFOYdMcR8jwU1jQDlOAnZCcNyADF2WnDnCOXiU/g==", "user"=>{"name"=>"hola", "email"=>"hola@hola.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hola"], ["email", "hola@hola.com"], ["password", "hola"], ["created_at", "2018-09-24 23:19:34.355223"], ["updated_at", "2018-09-24 23:19:34.355223"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:19:34 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:19:35 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 42.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/histories/new" for 127.0.0.1 at 2018-09-24 20:19:39 -0300
+Processing by HistoriesController#new as HTML
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (4.4ms)
+  Rendered histories/new.html.erb within layouts/application (10.0ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 62.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:19:47 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XK5mFKOhVhk4UObSHi+adWz3WPe9F4xJjahyOnr85y6gCmbeGtzdNqlF071RDyXPJVWQb1qjnQDX+UspCnw5dg==", "history"=>{"title"=>"lkdmckldcf", "remote_picture_url"=>"", "picture_cache"=>"", "content"=>"lkcdmlkc dfc"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`):
+  
+app/controllers/histories_controller.rb:28:in `create'
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:28:08 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XK5mFKOhVhk4UObSHi+adWz3WPe9F4xJjahyOnr85y6gCmbeGtzdNqlF071RDyXPJVWQb1qjnQDX+UspCnw5dg==", "history"=>{"title"=>"lkdmckldcf", "remote_picture_url"=>"", "picture_cache"=>"", "content"=>"lkcdmlkc dfc"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 4.5ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `user_id`):
+  
+app/controllers/histories_controller.rb:31:in `create'
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:28:34 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:29:52 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:29:57 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.9ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 54.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:29:58 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.9ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: histories.user_id: SELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?):
+     8: </div>
+     9: 
+    10: <div class="row">
+    11:   <% @histories.reverse.each do |history| %>
+    12:     <div class="col-sm-6 col-md-4">
+    13:       <div class="thumbnail">
+    14:         <%= link_to(image_tag(history.picture.thumb), history) if history.picture? %>
+  
+app/views/histories/u_histories.html.erb:11:in `_app_views_histories_u_histories_html_erb__3527518778962242991_70107227580100'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToHistory (20180924233346)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "histories" ADD "user" refences[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180924233346"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:34:28 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 84.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:34:32 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 46.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:34:33 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (1.1ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: histories.user_id: SELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?):
+     8: </div>
+     9: 
+    10: <div class="row">
+    11:   <% @histories.reverse.each do |history| %>
+    12:     <div class="col-sm-6 col-md-4">
+    13:       <div class="thumbnail">
+    14:         <%= link_to(image_tag(history.picture.thumb), history) if history.picture? %>
+  
+app/views/histories/u_histories.html.erb:11:in `_app_views_histories_u_histories_html_erb__3527518778962242991_70107276657100'
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:47:11 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (1.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: histories.user_id: SELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?):
+     8: </div>
+     9: 
+    10: <div class="row">
+    11:   <% @histories.reverse.each do |history| %>
+    12:     <div class="col-sm-6 col-md-4">
+    13:       <div class="thumbnail">
+    14:         <%= link_to(image_tag(history.picture.thumb), history) if history.picture? %>
+  
+app/views/histories/u_histories.html.erb:11:in `_app_views_histories_u_histories_html_erb__3527518778962242991_70107228444720'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToHistory (20180924233346)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ahistories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar DEFAULT NULL, "picture" varchar DEFAULT NULL, "content" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user"  DEFAULT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "ahistories" ("id","title","picture","content","created_at","updated_at","user")
+                     SELECT "id","title","picture","content","created_at","updated_at","user" FROM "histories"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "histories"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "histories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar DEFAULT NULL, "picture" varchar DEFAULT NULL, "content" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "histories" ("id","title","picture","content","created_at","updated_at")
+                     SELECT "id","title","picture","content","created_at","updated_at" FROM "ahistories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ahistories"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180924233346"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToHistory (20180924235041)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "histories" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_histories_on_user_id" ON "histories" ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180924235041"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_histories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_histories_on_user_id' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:51:15 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 48.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:51:17 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.2ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 47.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:51:18 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 56.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:51:20 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 46.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:51:24 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 56.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/histories/new" for 127.0.0.1 at 2018-09-24 20:51:25 -0300
+Processing by HistoriesController#new as HTML
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (2.7ms)
+  Rendered histories/new.html.erb within layouts/application (7.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 87ms (Views: 57.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:51:30 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tWvI5oT/BHft1xiWXnPlpBOqlKsvzC2KWR5ruK3WU1JJz8gsPYKPWHzCLfkRU1oeWghcM8h4PMMDT1Kr3VaNCg==", "history"=>{"title"=>"nlce", "remote_picture_url"=>"", "picture_cache"=>"", "content"=>"zsxsx"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "histories" ("title", "picture", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "nlce"], ["picture", nil], ["content", "zsxsx"], ["created_at", "2018-09-24 23:51:30.858062"], ["updated_at", "2018-09-24 23:51:30.858062"], ["user_id", 4]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/histories/1
+Completed 302 Found in 22ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/histories/1" for 127.0.0.1 at 2018-09-24 20:51:30 -0300
+Processing by HistoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering histories/show.html.erb within layouts/application
+  Rendered histories/show.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 101.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:51:34 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (6.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 68.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/histories/new" for 127.0.0.1 at 2018-09-24 20:51:37 -0300
+Processing by HistoriesController#new as HTML
+  Rendering histories/new.html.erb within layouts/application
+  Rendered histories/_form.html.erb (8.6ms)
+  Rendered histories/new.html.erb within layouts/application (18.0ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 73.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/histories" for 127.0.0.1 at 2018-09-24 20:51:40 -0300
+Processing by HistoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ug0Zyfujwgg7ckxCY8kWPuWE26w1xSq8NouqwEIe6nmuqRkDQt5JJ6pneS0s6amErCYTNNJxO/Vs2pPTMp40IQ==", "history"=>{"title"=>"rendklncrlkf", "remote_picture_url"=>"", "picture_cache"=>"", "content"=>"dkfjnclir"}, "commit"=>"Enviar"}
+Unpermitted parameter: :picture_cache
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[32mINSERT INTO "histories" ("title", "picture", "content", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "rendklncrlkf"], ["picture", nil], ["content", "dkfjnclir"], ["created_at", "2018-09-24 23:51:40.639823"], ["updated_at", "2018-09-24 23:51:40.639823"], ["user_id", 4]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/histories/2
+Completed 302 Found in 21ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/histories/2" for 127.0.0.1 at 2018-09-24 20:51:40 -0300
+Processing by HistoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering histories/show.html.erb within layouts/application
+  Rendered histories/show.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 93.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:51:42 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (6.7ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 57.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:51:44 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:51:45 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 70.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:51:46 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 62.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:51:48 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered histories/u_histories.html.erb within layouts/application (7.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 75.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:52:02 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sessions/4" for 127.0.0.1 at 2018-09-24 20:52:04 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DpWrVxN2UAQMxI1eNXcmCJ+x4QpSNUNWWhXOEVSyix/UJsu1Kee5EoIy8dPpDg0efbcBNE5RzVA/LOnAPa4G3w==", "id"=>"4"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:52:04 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:52:06 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (6.1ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:52:07 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/controllers/histories_controller.rb:15:in `u_histories'
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:52:51 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (5.0ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:52:56 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/controllers/histories_controller.rb:15:in `u_histories'
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:53:19 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:53:25 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 20:53:28 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"12T9QPrfqggQ7scj5JX7581Obt3BuevJfFBqihPPRxEDyfHGoG+iMS7IhoAfpy3pz7vE4YT+D/5uk6v3PxXdXA==", "user"=>{"name"=>"hola", "email"=>"hola@hola.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hola"], ["email", "hola@hola.com"], ["password", "hola"], ["created_at", "2018-09-24 23:53:28.478318"], ["updated_at", "2018-09-24 23:53:28.478318"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:53:28 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 64.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:53:30 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered histories/u_histories.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 66.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:53:33 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (7.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:53:36 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered histories/u_histories.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/sessions/5" for 127.0.0.1 at 2018-09-24 20:53:37 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tvjxBZnGUMonqRSt2y/OT9m1DStDYE3vxO+3zVC0uPP1EcMDUwhW5s2bWkuXFfSBxzaTztvXdNMXlOQLGemIAw==", "id"=>"5"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:53:37 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:53:39 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/helpers/users_helper.rb:6:in `current_user'
+app/controllers/histories_controller.rb:15:in `u_histories'
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:56:05 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 66ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-09-24 20:56:07 -0300
+Processing by HistoriesController#index as HTML
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendered histories/index.html.erb within layouts/application (5.0ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-09-24 20:56:09 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-24 20:56:12 -0300
+Processing by UsersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMroLU4u9CnHhGhZo/N0c9rBkQiI/whnLW/SFHnXiA0eZraUxrPgqv2qqgPHeko8VcL3s3ZxB4gfk8LsxTAdOw==", "user"=>{"name"=>"hola", "email"=>"hola@hola.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "hola"], ["email", "hola@hola.com"], ["password", "hola"], ["created_at", "2018-09-24 23:56:12.958173"], ["updated_at", "2018-09-24 23:56:12.958173"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-24 20:56:12 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 83.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/histories/u_histories" for 127.0.0.1 at 2018-09-24 20:56:14 -0300
+Processing by HistoriesController#u_histories as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering histories/u_histories.html.erb within layouts/application
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered histories/u_histories.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
